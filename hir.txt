@@ -1,0 +1,49 @@
+ABHAOnboardingApp/
+
+├── assets/ # Images, fonts, and other assets
+
+├── src/
+
+│ ├── components/ # Reusable components
+
+│ │ ├── FormInput.tsx # Custom input component
+
+│ │ ├── Button.tsx # Custom button component
+
+│ │ ├── QRCodeScanner.tsx # Component for scanning QR codes
+
+│ │ └── QRCodeGenerator.tsx # Component for generating QR codes
+
+│ ├── navigation/ # App navigation setup
+
+│ │ └── AppNavigator.tsx # Main navigator
+
+│ ├── screens/ # Individual screens for the app
+
+│ │ ├── LoginScreen.tsx # Login screen (ABHA login)
+
+│ │ ├── SignupScreen.tsx # Signup screen (ABHA account creation)
+
+│ │ ├── ProfileScreen.tsx # Profile screen (profile update)
+
+│ │ ├── ShareScreen.tsx # Scan & Share screen (QR code sharing)
+
+│ ├── services/ # API calls and business logic
+
+│ │ ├── ABHACreation.ts # Logic for ABHA account creation
+
+│ │ ├── ProfileUpdate.ts # Logic for profile update using ABHA number
+
+│ │ ├── Firebase.ts # Firebase config and initialization
+
+│ ├── utils/ # Utility functions
+
+│ │ └── Validation.ts # Input validation functions
+
+│ ├── App.tsx # Main entry point for the app
+
+├── firebase.json # Firebase config for backend services
+
+├── package.json # Project dependencies
+
+└── tsconfig.json # TypeScript configuration
