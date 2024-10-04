@@ -5,7 +5,7 @@ import { auth } from '../../firebase/firebase.config';  // Import Firebase auth 
 import { useNavigation } from '@react-navigation/native';  // Navigation hook
 
 const ProfileScreen = () => {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState();
   const navigation = useNavigation();
 
   // Listen for changes to the user's authentication state
@@ -21,7 +21,7 @@ const ProfileScreen = () => {
   const handleLogout = async () => {
     try {
       await signOut(auth);
-      navigation.navigate('Login');  // Navigate to login screen after logout
+      navigation.navigate('/login');  // Navigate to login screen after logout
     } catch (error) {
       console.error('Error logging out:', error.message);
     }

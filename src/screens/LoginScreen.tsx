@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, TextInput, StyleSheet, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
-const LoginScreen = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+const LoginScreen: React.FC = () => {
+  const [email, setEmail] = useState<string>('');
+  const [password, setPassword] = useState<string>('');
   const navigation = useNavigation();
 
   const handleLogin = () => {
@@ -49,7 +49,7 @@ const LoginScreen = () => {
         <TouchableOpacity>
           <Text style={styles.footerText}>Forgot Password?</Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate('Signup')}>
+        <TouchableOpacity onPress={() => navigation.navigate('Signup' as never)}>
           <Text style={styles.footerText}>New User? Register</Text>
         </TouchableOpacity>
       </View>
